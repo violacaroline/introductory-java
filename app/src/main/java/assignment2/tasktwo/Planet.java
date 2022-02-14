@@ -81,15 +81,19 @@ public class Planet {
    * @param theNewMoon - The name of the moon.
    */
   public void addMoon(Moon theNewMoon) {
-    // FIX
     moons.add(theNewMoon);
   }
 
   /**
-   * Displays an array of moons.
+   * Converts the arraylist of moons to an array of moons.
+   *
+   * @returns - An array of moons.
    */
-  public void getMoons() {
-    // RETURN ARRAY OF MOONS
+  public Moon[] getMoons() {
+    // IS THIS REALLY CORRECT? CHECK WITH TA'S
+    Moon[] showMoons = moons.toArray(new Moon[0]);
+
+    return showMoons;
   }
 
   /**
