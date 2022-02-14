@@ -4,11 +4,11 @@ package assignment2.taskone;
  * Represents a planet.
  */
 public class Planet {
-  private String name;
-  private int position;
-  private int noOfMoons;
-  private int aphelion;
-  private int perihelion;
+  private String newName; // ARE THESE WRONG?
+  private int newPos; // SHOULD THEY MATCH THE SETTERS PARAMETERS?
+  private int newCount; // WHY IS TOBIAS MAKING EMPTY CONSTRUCTORS? LECTURE 3 ENG 1:04
+  private int newAphelion;
+  private int newPerihelion;
   
   /**
    * Instanciates a planet object.
@@ -20,19 +20,20 @@ public class Planet {
    * @param perihelion - Distance to the point of the planets orbit nearest to the sun.
    */
   public Planet(String name, int position, int noOfMoons, int aphelion, int perihelion) {
-    if (name == null || name.length() < 2) {
-      this.name = "Invalid name";
-    } else {
-      this.name = name;
-    }
-    this.position = position;
-    this.noOfMoons = noOfMoons;
-    this.aphelion = aphelion;
-    this.perihelion = perihelion;
+    setName(name);
+    setPosition(position);
+    setNoOfMoons(noOfMoons);
+    setAphelion(aphelion);
+    setPerihelion(perihelion);
   }
 
+  /**
+   * Gets a planets name.
+   *
+   * @return - The name of planet.
+   */
   public String getName() {
-    return name;
+    return newName;
   }
 
   /**
@@ -41,39 +42,98 @@ public class Planet {
    * @param newName - Planets name.
    */
   public void setName(String newName) {
-    this.name = newName;
+    if (newName == null || newName.length() < 2) {
+      this.newName = "Invalid name";
+    } else {
+      this.newName = newName;
+    }
   }
 
+  /**
+   * Gets a planets position in the solar system.
+   *
+   * @return - The number representing the position.
+   */
   public int getPosition() {
-    return position;
+    return newPos;
   }
 
+  /**
+   * Validates and sets the planets position in the solar system.
+   *
+   * @param newPos - The number representing the planets position.
+   */
   public void setPosition(int newPos) {
-    this.position = newPos;
+    if (newPos < 0) {
+      this.newPos = 0;
+    } else {
+      this.newPos = newPos;
+    }
   }
 
+  /**
+   * Returns the number of moons.
+   *
+   * @return - The amount of moons.
+   */
   public int getNoOfMoons() {
-    return noOfMoons;
+    return newCount;
   }
 
+  /**
+   * Validates and sets the amount of moons.
+   *
+   * @param newCount - The amount of moons. 
+   */
   public void setNoOfMoons(int newCount) {
-    this.noOfMoons = newCount;
+    if (newCount < 0) {
+      this.newCount = 0;
+    } else {
+      this.newCount = newCount;
+    }
   }
 
+  /**
+   * Gets the aphelion distance.
+   *
+   * @return - Distance in km.
+   */
   public int getAphelion() {
-    return aphelion;
+    return newAphelion;
   }
 
+  /**
+   * Validates and sets the aphelion distance.
+   *
+   * @param newAphelion - The distance in km.
+   */
   public void setAphelion(int newAphelion) {
-    this.aphelion = newAphelion;
+    if (newAphelion < 0) {
+      this.newAphelion = 0;
+    } else {
+      this.newAphelion = newAphelion;
+    }
   }
 
+  /**
+   * Returns the perihelion distance.
+   *
+   * @return - The distance in km.
+   */
   public int getPerihelion() {
-    return perihelion;
+    return newPerihelion;
   }
 
-  public void setPerihelion(int newPerihelion) {
-    this.perihelion = newPerihelion;
-  }
-  
+  /**
+   * Validates and sets the perihelion distance.
+   *
+   * @param newPerihelion - The distance in km.
+   */
+  public void setPerihelion(int newPerihelion) {    
+    if (newPerihelion < 0) {
+      this.newPerihelion = 0;
+    } else {
+      this.newPerihelion = newPerihelion;
+    }  
+  }  
 }

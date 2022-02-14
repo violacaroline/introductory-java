@@ -10,7 +10,7 @@ public class PlanetMain {
    * @param args - Any command line arguments.
    */
   public static void main(String[] args) {
-    Planet earth = new Planet("E", 3, 1, 152097701, 147098074);
+    Planet earth = new Planet("Earth", 3, 1, 152097701, 147098074);
     Planet mars = new Planet("Mars", 4, 2, 249209300, 206669000);
 
     printPlanets(earth);
