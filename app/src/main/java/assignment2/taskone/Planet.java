@@ -20,7 +20,11 @@ public class Planet {
    * @param perihelion - Distance to the point of the planets orbit nearest to the sun.
    */
   public Planet(String name, int position, int noOfMoons, int aphelion, int perihelion) {
-    this.name = name;
+    if (name == null || name.length() < 2) {
+      this.name = "Invalid name";
+    } else {
+      this.name = name;
+    }
     this.position = position;
     this.noOfMoons = noOfMoons;
     this.aphelion = aphelion;
@@ -37,11 +41,7 @@ public class Planet {
    * @param newName - Planets name.
    */
   public void setName(String newName) {
-    if (newName == null || newName.length() < 2) {
-      this.name = "Invalid name";
-    } else {
-      this.name = newName;
-    }
+    this.name = newName;
   }
 
   public int getPosition() {
