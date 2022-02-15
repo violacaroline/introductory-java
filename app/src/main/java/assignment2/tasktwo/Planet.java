@@ -23,11 +23,10 @@ public class Planet {
    * @param perihelion - The distance to perihelion in km.
    */
   public Planet(String name, int position, int noOfMoons, int aphelion, int perihelion) {
-    this.name = name;
-    this.position = position;
-    this.noOfMoons = noOfMoons;
-    this.aphelion = aphelion;
-    this.perihelion = perihelion;
+    setName(name);
+    setPosition(position);    
+    setAphelion(aphelion);
+    setPerihelion(perihelion);
   }
 
   /**
@@ -45,7 +44,11 @@ public class Planet {
    * @param name - The name of the planet.
    */
   public void setName(String name) {
-    this.name = name;
+    if (name == null || name.length() < 2) {
+      this.name = "Invalid name";
+    } else {
+      this.name = name;
+    }
   }
 
   /**
@@ -63,7 +66,11 @@ public class Planet {
    * @param position - The number representing the planets position.
    */
   public void setPosition(int position) {
-    this.position = position;
+    if (position < 0) {
+      this.position = 0;
+    } else {
+      this.position = position;
+    }
   }
 
   /**
@@ -81,7 +88,7 @@ public class Planet {
    * @param theNewMoon - The name of the moon.
    */
   public void addMoon(Moon theNewMoon) {
-    moons.add(theNewMoon);
+    moons.add(theNewMoon); // VALIDATE FOR UNEXISTING NAME?
   }
 
   /**
@@ -90,8 +97,7 @@ public class Planet {
    * @returns - An array of moons.
    */
   public Moon[] getMoons() {
-    // IS THIS REALLY CORRECT? CHECK WITH TA'S
-    Moon[] showMoons = moons.toArray(new Moon[0]);
+    Moon[] showMoons = moons.toArray(new Moon[0]); // IS THIS REALLY CORRECT? CHECK WITH TA'S
 
     return showMoons;
   }
@@ -111,7 +117,11 @@ public class Planet {
    * @param aphelion - The distance in km.
    */
   public void setAphelion(int aphelion) {
-    this.aphelion = aphelion;
+    if (aphelion < 0) {
+      this.aphelion = 0;
+    } else {
+      this.aphelion = aphelion;
+    }
   }
 
   /**
@@ -129,6 +139,10 @@ public class Planet {
    * @param perihelion - Distance in km.
    */
   public void setPerihelion(int perihelion) {
-    this.perihelion = perihelion;
+    if (perihelion < 0) {
+      this.perihelion = 0;
+    } else {
+      this.perihelion = perihelion;
+    }  
   } 
 }

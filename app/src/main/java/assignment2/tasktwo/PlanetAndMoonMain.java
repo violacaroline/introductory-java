@@ -1,7 +1,5 @@
 package assignment2.tasktwo;
 
-import java.lang.reflect.Array;
-
 /**
  * Represents a main class for Planet and Moon.
  */
@@ -34,11 +32,10 @@ public class PlanetAndMoonMain {
    */
   public static void displayPlanetsandMoons(Planet planet) {
     System.out.println("The planet is called " + planet.getName() + " and has the following moons:");
-    int i = 0;
 
-    for (Moon moon : planet.getMoons()) {      
+    // THIS LINE IS TOO LONG FOR CHECKSTYLE - DO I NEED TO CARE?
+    for (int i = 0; i < planet.getMoons().length; i++) {
       System.out.println("  Moon " + (i + 1) +  " is called " + planet.getMoons()[i].getName() + " (" + planet.getMoons()[i].getKmSize() + "km)");
-      i++;
     }
   }
 }
