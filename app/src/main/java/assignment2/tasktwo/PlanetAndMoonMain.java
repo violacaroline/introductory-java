@@ -1,5 +1,7 @@
 package assignment2.tasktwo;
 
+import java.lang.reflect.Array;
+
 /**
  * Represents a main class for Planet and Moon.
  */
@@ -21,11 +23,22 @@ public class PlanetAndMoonMain {
     mars.addMoon(phobos);
     mars.addMoon(deimos);
 
-    System.out.println("The planet is called " + earth.getName() + " and has the following moons:");
-    System.out.println("  Moon 1 is called " + earth.getMoons()[0].getName() + " (" + earth.getMoons()[0].getKmSize() + "km)");
+    displayPlanetsandMoons(earth);
+    displayPlanetsandMoons(mars);
+  }
 
-    System.out.println("\nThe planet is called " + mars.getName() + " and has the following moons:");
-    System.out.println("  Moon 1 is called " + mars.getMoons()[0].getName() + " (" + mars.getMoons()[0].getKmSize() + "km)");
-    System.out.println("  Moon 2 is called " + mars.getMoons()[1].getName() + " (" + mars.getMoons()[1].getKmSize() + "km)");
+  /**
+   * Displays planets moons.
+   *
+   * @param planet - The planets which moons are to be presented.
+   */
+  public static void displayPlanetsandMoons(Planet planet) {
+    System.out.println("The planet is called " + planet.getName() + " and has the following moons:");
+    int i = 0;
+
+    for (Moon moon : planet.getMoons()) {      
+      System.out.println("  Moon " + (i + 1) +  " is called " + planet.getMoons()[i].getName() + " (" + planet.getMoons()[i].getKmSize() + "km)");
+      i++;
+    }
   }
 }
