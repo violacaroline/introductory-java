@@ -28,7 +28,7 @@ public class Mammal extends Animal {
    * Displays the specific mammal and its sound.
    */
   public void makeSound() {
-    System.out.println("A " + this.getName() + " says: " + this.getSound());
+    System.out.println("The " + this.getName() + " says: " + this.getSound());
   }
 
   /**

@@ -28,7 +28,7 @@ public class Reptile extends Animal {
    * Displays the specific reptile and its sound.
    */
   public void makeSound() {
-    System.out.println("A " + this.getName() + " hizzes: " + this.getSound());
+    System.out.println("The " + this.getName() + " hizzes: " + this.getSound());
   }
 
   /**
