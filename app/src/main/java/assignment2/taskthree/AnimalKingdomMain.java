@@ -1,7 +1,7 @@
 package assignment2.taskthree;
 
 /**
- * Represents a Animal Kingdom program.
+ * Represents a Animal Kingdom.
  */
 public class AnimalKingdomMain {
   /**
