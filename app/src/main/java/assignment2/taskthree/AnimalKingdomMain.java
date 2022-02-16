@@ -16,7 +16,8 @@ public class AnimalKingdomMain {
     Mammal ocelot = new Mammal("Ocelot", "Leopardus pardalis", 12.0, "Muau Rawr", "Yellow-tan with dark spots", true);
     ocelot.makeSound();
 
-    Reptile coralillo = new Reptile("Coralillo", "Micrurus fulvius", 1.9, "Tzzzzz Tzzzz", "Sandy, marshy area of southern U.S", true);
+    Reptile coralillo = new Reptile("Coralillo", "Micrurus fulvius",
+            1.9, "Tzzzzz Tzzzz", "Sandy, marshy area of southern U.S", true);
     coralillo.makeSound();
   }
 }

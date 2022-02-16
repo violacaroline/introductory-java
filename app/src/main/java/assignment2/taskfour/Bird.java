@@ -23,7 +23,7 @@ public class Bird extends Animal {
       String nestType) {
     super(name, latinName, weight, sound);
 
-    // VARFÖR GÖR MAN SÅ HÄR VS THIS.ISMIGRANT = ISMIGRANT?
+    // VARFÖR GÖR MAN SÅ HÄR VS THIS.ISMIGRANT = ISMIGRANT? DEN GÅR INTE AUTOMATISKT IGENOM SETTERN ANNARS?
     setMigrant(isMigrant);
     setCanFly(canFly);
     setNestType(nestType);

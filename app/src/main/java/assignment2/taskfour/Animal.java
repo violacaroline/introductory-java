@@ -9,7 +9,6 @@ public abstract class Animal implements Comparable<Animal> {
   private Double weight;
   protected String sound;
 
-  // DEFAULT CONSTRUCTOR? VARFÖR?
   public Animal() {}
 
   /**
@@ -106,8 +105,13 @@ public abstract class Animal implements Comparable<Animal> {
 
   @Override
   public int compareTo(Animal otherAnimal) {
-    // TODO Auto-generated method stub
-    // if latinnames first bokstav mindre - return positiv
-    return 0;
+    // If latinnames första bokstav är mindre - return positiv || WTF???
+    if (this.latinName.compareTo(otherAnimal.getLatinName()) == 1) {
+      return 1;
+    } else if (this.latinName.compareTo(otherAnimal.getLatinName()) == -1) {
+      return -1;
+    } else {
+      return 0;
+    }    
   }  
 }

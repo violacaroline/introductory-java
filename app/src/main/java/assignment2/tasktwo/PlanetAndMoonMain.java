@@ -35,7 +35,8 @@ public class PlanetAndMoonMain {
 
     // THIS LINE IS TOO LONG FOR CHECKSTYLE - DO I NEED TO CARE?
     for (int i = 0; i < planet.getMoons().length; i++) {
-      System.out.println("  Moon " + (i + 1) +  " is called " + planet.getMoons()[i].getName() + " (" + planet.getMoons()[i].getKmSize() + "km)");
+      System.out.println("  Moon " + (i + 1) +  " is called " + planet.getMoons()[i].getName()
+          + " (" + planet.getMoons()[i].getKmSize() + "km)");
     }
   }
 }
