@@ -3,7 +3,7 @@ package assignment2.taskfour;
 /**
  * Represents an animal.
  */
-public abstract class Animal {
+public abstract class Animal implements Comparable<Animal> {
   private String name;
   private String latinName;
   private Double weight;
@@ -102,5 +102,12 @@ public abstract class Animal {
   /**
    * An abstract method to be implemented differently in different animal classes.
    */
-  public abstract void makeSound();  
+  public abstract void makeSound();
+
+  @Override
+  public int compareTo(Animal otherAnimal) {
+    // TODO Auto-generated method stub
+    // if latinnames first bokstav mindre - return positiv
+    return 0;
+  }  
 }

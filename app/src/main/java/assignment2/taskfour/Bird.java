@@ -34,6 +34,8 @@ public class Bird extends Animal {
    */
   public void makeSound() {
     System.out.println("The " + this.getName() + " tweets: " + this.getSound());
+    // return "The " + this.getName() + " tweets: " + this.getSound();
+    // NEEDS FIXING
   }
 
   /**
