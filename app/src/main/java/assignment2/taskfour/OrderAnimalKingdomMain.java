@@ -1,6 +1,7 @@
 package assignment2.taskfour;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Represents an Animal Kingdom.
@@ -34,6 +35,13 @@ public class OrderAnimalKingdomMain {
     animals.add(pantherChameleon);
     animals.add(gharial);
 
+    for (Animal animal : animals) {
+      System.out.println(animal.getLatinName());
+    }
+
+    Collections.sort(animals);
+
+    System.out.println("\nSorted?");
     for (Animal animal : animals) {
       System.out.println(animal.getLatinName());
     }

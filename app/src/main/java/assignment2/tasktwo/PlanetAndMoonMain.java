@@ -33,7 +33,6 @@ public class PlanetAndMoonMain {
   public static void displayPlanetsandMoons(Planet planet) {
     System.out.println("The planet is called " + planet.getName() + " and has the following moons:");
 
-    // THIS LINE IS TOO LONG FOR CHECKSTYLE - DO I NEED TO CARE?
     for (int i = 0; i < planet.getMoons().length; i++) {
       System.out.println("  Moon " + (i + 1) +  " is called " + planet.getMoons()[i].getName()
           + " (" + planet.getMoons()[i].getKmSize() + "km)");
