@@ -66,4 +66,14 @@ public class Mammal extends Animal {
   public void setHasWinterFur(boolean hasWinterFur) {
     this.hasWinterFur = hasWinterFur;
   }
+
+  /**
+   * Override method to return fur color.
+   *
+   * @return - The fur color. 
+   */
+  @Override
+  public String extraInformation() {
+    return furColor;
+  }  
 }

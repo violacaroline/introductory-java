@@ -39,14 +39,11 @@ public class OrderAnimalKingdomMain {
 
     for (Animal animal : animals) {
       if (animal.getClass().getSimpleName().equals("Bird")) {
-        Bird bird = (Bird) animal;
-        System.out.println(animal.getLatinName() + " puts its eggs in " + bird.getNestType());      
+        System.out.println(animal.getLatinName() + " puts its eggs in " + animal.extraInformation());      
       } else if (animal.getClass().getSimpleName().equals("Mammal")) {
-        Mammal mammal = (Mammal) animal;
-        System.out.println(animal.getLatinName() + " has a fur that is " + mammal.getFurColor());
+        System.out.println(animal.getLatinName() + " has a fur that is " + animal.extraInformation());
       } else {
-        Reptile reptile = (Reptile) animal;
-        System.out.println(animal.getLatinName() + " lives in " + reptile.getHabitat());
+        System.out.println(animal.getLatinName() + " lives in " + animal.extraInformation());
       }
     }
   }  

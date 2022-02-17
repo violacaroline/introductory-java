@@ -91,4 +91,14 @@ public class Bird extends Animal {
   public void setNestType(String nestType) {
     this.nestType = nestType;
   }
+
+  /**
+   * Override method to return nest type.
+   *
+   * @return - The nest type. 
+   */
+  @Override
+  public String extraInformation() {
+    return nestType;
+  }  
 }

@@ -88,6 +88,9 @@ public class Planet {
    * @param theNewMoon - The name of the moon.
    */
   public void addMoon(Moon theNewMoon) {
+    if (theNewMoon.getName().length() < 2) {
+      // Throw error
+    }
     moons.add(theNewMoon); // VALIDATE FOR UNEXISTING NAME?
   }
 

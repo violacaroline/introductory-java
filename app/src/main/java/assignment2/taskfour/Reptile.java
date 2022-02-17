@@ -66,4 +66,14 @@ public class Reptile extends Animal {
   public void setPoisonous(boolean isPoisonous) {
     this.isPoisonous = isPoisonous;
   }
+
+  /**
+   * Override method to return habitat.
+   *
+   * @return - The habitat. 
+   */
+  @Override
+  public String extraInformation() {
+    return habitat;
+  }  
 }

@@ -103,6 +103,11 @@ public abstract class Animal implements Comparable<Animal> {
    */
   public abstract void makeSound();
 
+  /**
+   * An abstract method to return extra info.
+   */
+  public abstract String extraInformation();
+
   @Override
   public int compareTo(Animal otherAnimal) {
     return this.latinName.compareTo(otherAnimal.latinName);   
