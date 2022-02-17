@@ -105,14 +105,6 @@ public abstract class Animal implements Comparable<Animal> {
 
   @Override
   public int compareTo(Animal otherAnimal) {
-    // If latinnames första bokstav är mindre - return positiv || WTF???
-    // if (this.latinName.compareTo(otherAnimal.getLatinName()) == 1) {
-    //   return 1;
-    // } else if (this.latinName.compareTo(otherAnimal.getLatinName()) == -1) {
-    //   return -1;
-    // } else {
-    //   return 0;
-    // } 
     return this.latinName.compareTo(otherAnimal.latinName);   
   }  
 }
