@@ -11,13 +11,13 @@ public class AnimalKingdomMain {
    */
   public static void main(String[] args) {
     Bird toh = new Bird("Toh", "Eumomota superciliosa", 0.2, "Tweet tweet twoo", false, true, "Rock walls");
-    toh.makeSound();
+    System.out.println(toh.makeSound());
 
     Mammal ocelot = new Mammal("Ocelot", "Leopardus pardalis", 12.0, "Muau Rawr", "Yellow-tan with dark spots", true);
-    ocelot.makeSound();
+    System.out.println(ocelot.makeSound());
 
     Reptile coralillo = new Reptile("Coralillo", "Micrurus fulvius",
             1.9, "Tzzzzz Tzzzz", "Sandy, marshy area of southern U.S", true);
-    coralillo.makeSound();
+    System.out.println(coralillo.makeSound());
   }
 }

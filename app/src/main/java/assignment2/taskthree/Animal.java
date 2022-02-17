@@ -102,5 +102,5 @@ public abstract class Animal {
   /**
    * An abstract method to be implemented differently in different animal classes.
    */
-  public abstract void makeSound();  
+  public abstract String makeSound();  
 }

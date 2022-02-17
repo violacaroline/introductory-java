@@ -31,9 +31,11 @@ public class Bird extends Animal {
 
   /**
    * Displays the specific bird and its sound.
+   *
+   * @return - The specific bird and its sound.
    */
-  public void makeSound() {
-    System.out.println("The " + this.getName() + " tweets: " + this.getSound());
+  public String makeSound() {
+    return "The " + this.getName() + " tweets: " + this.getSound();
   }
 
   /**

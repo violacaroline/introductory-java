@@ -26,9 +26,11 @@ public class Mammal extends Animal {
 
   /**
    * Displays the specific mammal and its sound.
+   *
+   * @return - The specific animal and its sound.
    */
-  public void makeSound() {
-    System.out.println("The " + this.getName() + " says: " + this.getSound());
+  public String makeSound() {
+    return "The " + this.getName() + " says: " + this.getSound();
   }
 
   /**
