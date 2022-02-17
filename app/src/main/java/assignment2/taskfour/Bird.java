@@ -99,6 +99,6 @@ public class Bird extends Animal {
    */
   @Override
   public String extraInformation() {
-    return nestType;
+    return getNestType();
   }  
 }

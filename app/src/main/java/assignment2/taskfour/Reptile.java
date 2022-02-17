@@ -74,6 +74,6 @@ public class Reptile extends Animal {
    */
   @Override
   public String extraInformation() {
-    return habitat;
+    return getHabitat();
   }  
 }
