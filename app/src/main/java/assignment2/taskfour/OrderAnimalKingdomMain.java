@@ -39,11 +39,11 @@ public class OrderAnimalKingdomMain {
 
     for (Animal animal : animals) {
       if (animal.getClass().getSimpleName().equals("Bird")) {
-        System.out.println(animal.getLatinName() + " puts its eggs in " + animal.extraInformation());      
+        System.out.println(animal.getLatinName() + " puts its eggs in/on " + animal.extraInformation());      
       } else if (animal.getClass().getSimpleName().equals("Mammal")) {
         System.out.println(animal.getLatinName() + " has a fur that is " + animal.extraInformation());
       } else {
-        System.out.println(animal.getLatinName() + " lives in " + animal.extraInformation());
+        System.out.println(animal.getLatinName() + " lives in/on " + animal.extraInformation());
       }
     }
   }  
