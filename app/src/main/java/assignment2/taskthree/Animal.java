@@ -9,11 +9,10 @@ public abstract class Animal {
   private Double weight;
   protected String sound;
 
-  // DEFAULT CONSTRUCTOR? VARFÖR?
   public Animal() {}
 
   /**
-   * A model to use for instanciating an object for another type. SINCE ANIMAL CAN'T BE INSTANCIATED?
+   * A model to use for instanciating an object for another type.
    *
    * @param name - Name of specified animal.
    * @param latinName - Latin name of specified animal.

@@ -23,7 +23,7 @@ public class Planet {
    * @param perihelion - The distance to perihelion in km.
    */
   public Planet(String name, int position, int noOfMoons, int aphelion, int perihelion) {
-    setName(name);
+    setName(name); // this.name = name;
     setPosition(position);    
     setAphelion(aphelion);
     setPerihelion(perihelion);
@@ -101,7 +101,6 @@ public class Planet {
    */
   public Moon[] getMoons() {
     Moon[] showMoons = moons.toArray(new Moon[0]); // IS THIS REALLY CORRECT? CHECK WITH TA'S
-
     return showMoons;
   }
 
