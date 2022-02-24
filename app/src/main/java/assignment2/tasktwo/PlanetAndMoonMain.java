@@ -9,23 +9,27 @@ public class PlanetAndMoonMain {
    *
    * @param args - Any command line arguments.
    */
-  public static void main(String[] args) {    
-    Planet earth = new Planet("Earth", 3, 1, 152097701, 147098074);
-    Moon theMoon = new Moon("The Moon", 3474);
-    earth.addMoon(theMoon);
-    displayPlanetsandMoons(earth);
+  public static void main(String[] args) {
+    try {
+      Planet earth = new Planet("Earth", -1, 1, 152097701, 147098074);
+      Moon theMoon = new Moon("The Moon", 3474);
+      earth.addMoon(theMoon);
+      displayPlanetsandMoons(earth);
 
-    Planet mars = new Planet("Mars", 4, 2, 249209300, 206669000);
-    Moon phobos = new Moon("Phobos", 22);
-    Moon deimos = new Moon("Deimos", 12);
-    mars.addMoon(phobos);
-    mars.addMoon(deimos);
-    displayPlanetsandMoons(mars);
-    
-    Planet jupiter = new Planet("Jupiter", 5, 53, 816, 740);
-    Moon europa = new Moon("Europa", 1560);
-    jupiter.addMoon(europa);
-    displayPlanetsandMoons(jupiter);   
+      Planet mars = new Planet("Mars", 4, 2, 249209300, 206669000);
+      Moon phobos = new Moon("Phobos", 22);
+      Moon deimos = new Moon("Deimos", 12);
+      mars.addMoon(phobos);
+      mars.addMoon(deimos);
+      displayPlanetsandMoons(mars);
+
+      Planet jupiter = new Planet("Jupiter", 5, 53, 816, 740);
+      Moon europa = new Moon("Europa", 1560);
+      jupiter.addMoon(europa);
+      displayPlanetsandMoons(jupiter);
+    } catch (IllegalArgumentException i) {
+      System.out.println("Value too small.");
+    }
   }
 
   /**

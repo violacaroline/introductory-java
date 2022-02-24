@@ -67,7 +67,7 @@ public class Planet {
    */
   public void setPosition(int position) {
     if (position < 0) {
-      this.position = 0;
+      throw new IllegalArgumentException();
     } else {
       this.position = position;
     }
