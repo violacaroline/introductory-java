@@ -45,7 +45,7 @@ public class Planet {
    */
   public void setName(String name) {
     if (name == null || name.length() < 2) {
-      this.name = "Invalid name";
+      throw new IllegalArgumentException();
     } else {
       this.name = name;
     }
@@ -89,9 +89,9 @@ public class Planet {
    */
   public void addMoon(Moon theNewMoon) {
     if (theNewMoon.getName().length() < 2) {
-      // Throw error
+      throw new IllegalArgumentException();
     }
-    moons.add(theNewMoon); // VALIDATE FOR UNEXISTING NAME?
+    moons.add(theNewMoon);
   }
 
   /**
@@ -100,7 +100,7 @@ public class Planet {
    * @returns - An array of moons.
    */
   public Moon[] getMoons() {
-    Moon[] showMoons = moons.toArray(new Moon[0]); // IS THIS REALLY CORRECT? CHECK WITH TA'S
+    Moon[] showMoons = moons.toArray(new Moon[0]);
     return showMoons;
   }
 
@@ -120,7 +120,7 @@ public class Planet {
    */
   public void setAphelion(int aphelion) {
     if (aphelion < 0) {
-      this.aphelion = 0;
+      throw new IllegalArgumentException();
     } else {
       this.aphelion = aphelion;
     }
@@ -142,7 +142,7 @@ public class Planet {
    */
   public void setPerihelion(int perihelion) {
     if (perihelion < 0) {
-      this.perihelion = 0;
+      throw new IllegalArgumentException();
     } else {
       this.perihelion = perihelion;
     }  

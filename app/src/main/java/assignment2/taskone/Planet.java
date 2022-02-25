@@ -43,7 +43,7 @@ public class Planet {
    */
   public void setName(String newName) {
     if (newName == null || newName.length() < 2) {
-      this.newName = "Invalid name";
+      throw new IllegalArgumentException();
     } else {
       this.newName = newName;
     }
@@ -65,7 +65,7 @@ public class Planet {
    */
   public void setPosition(int newPos) {
     if (newPos < 0) {
-      this.newPos = 0;
+      throw new IllegalArgumentException();
     } else {
       this.newPos = newPos;
     }
@@ -87,7 +87,7 @@ public class Planet {
    */
   public void setNoOfMoons(int newCount) {
     if (newCount < 0) {
-      this.newCount = 0;
+      throw new IllegalArgumentException();
     } else {
       this.newCount = newCount;
     }
@@ -109,7 +109,7 @@ public class Planet {
    */
   public void setAphelion(int newAphelion) {
     if (newAphelion < 0) {
-      this.newAphelion = 0;
+      throw new IllegalArgumentException();
     } else {
       this.newAphelion = newAphelion;
     }
@@ -131,7 +131,7 @@ public class Planet {
    */
   public void setPerihelion(int newPerihelion) {    
     if (newPerihelion < 0) {
-      this.newPerihelion = 0;
+      throw new IllegalArgumentException();
     } else {
       this.newPerihelion = newPerihelion;
     }  

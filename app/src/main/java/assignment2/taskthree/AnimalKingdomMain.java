@@ -10,6 +10,7 @@ public class AnimalKingdomMain {
    * @param args - Any command line arguments.
    */
   public static void main(String[] args) {
+
     Bird toh = new Bird("Toh", "Eumomota superciliosa", 0.2, "Tweet tweet twoo", false, true, "Rock walls");
     System.out.println(toh.makeSound());
 
@@ -17,7 +18,7 @@ public class AnimalKingdomMain {
     System.out.println(ocelot.makeSound());
 
     Reptile coralillo = new Reptile("Coralillo", "Micrurus fulvius",
-            1.9, "Tzzzzz Tzzzz", "Sandy, marshy area of southern U.S", true);
+        1.9, "Tzzzzz Tzzzz", "Sandy, marshy area of southern U.S", true);
     System.out.println(coralillo.makeSound());
   }
 }

@@ -10,11 +10,15 @@ public class PlanetMain {
    * @param args - Any command line arguments.
    */
   public static void main(String[] args) {
-    Planet earth = new Planet("Earth", 3, 1, 152097701, 147098074);
-    Planet mars = new Planet("Mars", 4, 2, 249209300, 206669000);
+    try {
+      Planet earth = new Planet("Earth", 3, 1, 152097701, 147098074);
+      Planet mars = new Planet("Mars", 4, 2, 249209300, 206669000);
 
-    printPlanets(earth);
-    printPlanets(mars);
+      printPlanets(earth);
+      printPlanets(mars);
+    } catch (IllegalArgumentException error) {
+      System.out.println("Invalid input.");
+    }
   }
 
   /**
