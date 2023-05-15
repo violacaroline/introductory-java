@@ -4,9 +4,9 @@ package assignment2.taskone;
  * Represents a planet.
  */
 public class Planet {
-  private String newName; // ARE THESE WRONG?
-  private int newPos; // SHOULD THEY MATCH THE SETTERS PARAMETERS?
-  private int newCount; // WHY IS TOBIAS MAKING EMPTY CONSTRUCTORS? LECTURE 3 ENG 1:04
+  private String newName; 
+  private int newPos; 
+  private int newCount; 
   private int newAphelion;
   private int newPerihelion;
   
